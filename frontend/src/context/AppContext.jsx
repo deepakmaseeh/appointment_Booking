@@ -18,7 +18,7 @@ const [userData , setUserData]= useState(false)
 const getDoctorsData = async () => {
     try {
       const { data } = await axios.get(
-        "http://localhost:3000/api/doctor/doctorList");
+        "https://appointment-booking-1-qq03.onrender.com/api/doctor/doctorList");
      
       if (data.success) {
         setDoctor(data.doctors);
@@ -33,7 +33,7 @@ const getDoctorsData = async () => {
 
   const loadUserProfileData = async () => {
     try {
-        const { data } = await axios.get("http://localhost:3000/api/user/getUserProfile",{headers: {token}});
+        const { data } = await axios.get("https://appointment-booking-tbd2.onrender.com/api/user/getUserProfile",{headers: {token}});
         if (data.success) {
             setUserData(data.userData);
         } else {
