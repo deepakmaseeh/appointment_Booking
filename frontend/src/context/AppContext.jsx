@@ -18,7 +18,7 @@ const [userData , setUserData]= useState(false)
 const getDoctorsData = async () => {
     try {
       const { data } = await axios.get(
-        "https://appointment-booking-1-qq03.onrender.com/api/doctor/doctorList");
+        "https://appointment-booking-tbd2.onrender.com/api/doctor/doctorList");
      
       if (data.success) {
         setDoctor(data.doctors);
