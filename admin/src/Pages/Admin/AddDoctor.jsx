@@ -42,7 +42,7 @@ function AddDoctor() {
             // console.log(formData);
             // formData.forEach((value, key) => console.log(`${key}: ${value}`));
 
-            const {data} = await axios.post('http://localhost:3000/api/admin/addDoctor', formData,
+            const {data} = await axios.post('https://appointment-booking-tbd2.onrender.com/api/admin/addDoctor', formData,
                {headers: {atoken}}
               // { headers: { Authorization: `Bearer ${atoken}` } }
               )
