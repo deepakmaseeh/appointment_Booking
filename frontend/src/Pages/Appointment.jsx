@@ -95,7 +95,7 @@ const bookAppointment = async () => {
 
     const slotDate = day + "" + month + "" + year
 
-    const {data} = await axios.post('http://localhost:3000/api/user/bookAppointment', {docId, slotDate, slotTime}, {headers: {token}})
+    const {data} = await axios.post('https://appointment-booking-tbd2.onrender.com/api/user/bookAppointment', {docId, slotDate, slotTime}, {headers: {token}})
     console.log("Booking with docId:", docId);
 
     if (data.success) {
