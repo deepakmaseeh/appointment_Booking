@@ -9,7 +9,7 @@ const [atoken,setAToken] = useState(localStorage.getItem('aToken')?localStorage.
   const [doctors, setDoctors] = useState([]);
 
 // backendURL = import.meta.env.VITE_BACKEND_URL
-  const backendURL ="http://localhost:3000"
+  const backendURL ="https://appointment-booking-tbd2.onrender.com"
 
 
 // const value = {
@@ -20,7 +20,7 @@ const [atoken,setAToken] = useState(localStorage.getItem('aToken')?localStorage.
 const getAllDoctors = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:3000/api/admin/allDoctors",
+          "https://appointment-booking-tbd2.onrender.com/api/admin/allDoctors",
           // {},
           { headers: { atoken } }
           // {headers: { atoken: 'token '}}
