@@ -26,7 +26,7 @@ const onSubmitHandler = async (event) => {
   
      try {
          if(state ==='Sign Up'){
-            const {data} =await axios.post('http://localhost:3000/api/user/userSignUp', {username,email, password})
+            const {data} =await axios.post('https://appointment-booking-tbd2.onrender.com/api/user/userSignUp', {username,email, password})
 
             if(data.success){
               localStorage.setItem('token', data.token)
@@ -37,7 +37,7 @@ const onSubmitHandler = async (event) => {
              toast.error(data.message)
             }
          } else{
-          const {data} =await axios.post('http://localhost:3000/api/user/signIn', {email, password})
+          const {data} =await axios.post('https://appointment-booking-tbd2.onrender.com/api/user/signIn', {email, password})
           if(data.success){
            localStorage.setItem('token', data.token)
            setToken(data.token);
