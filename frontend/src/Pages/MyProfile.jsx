@@ -37,7 +37,7 @@ const [image, setImage] = useState(false);
      
     
 
-        const { data } = await axios.post('http://localhost:3000/api/user/updateProfile', formData,{headers: {token}});
+        const { data } = await axios.post('https://appointment-booking-tbd2.onrender.com/api/user/updateProfile', formData,{headers: {token}});
         
         if (data.success) {
            toast.success(data.message)
