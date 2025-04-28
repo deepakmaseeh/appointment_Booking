@@ -31,7 +31,7 @@ const Login = () => {
     
      try {
       if(state==='Admin'){
-         const {data} =await axios.post('http://localhost:3000/api/admin/adminLogin', {email, password})
+         const {data} =await axios.post('https://appointment-booking-tbd2.onrender.com/api/admin/adminLogin', {email, password})
          if(data.success){
           localStorage.setItem('aToken', data.token)
           setAToken(data.token);
